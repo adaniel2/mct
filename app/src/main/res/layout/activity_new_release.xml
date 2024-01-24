@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".NewReleaseActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBarNewRelease"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progress_bar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:tooltipText="Progress does not need to be 100% to submit ;)"/>
+
+    <RelativeLayout
+        android:id="@+id/inputsNewRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/progressBarNewRelease">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutTrackName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:background="@null"
+            app:endIconMode="clear_text"
+            app:endIconDrawable="@drawable/icon_clear_20"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTrackName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/work_sans_bold"
+                android:hint="Track Name"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutArtist"
+            android:layout_below="@id/textInputLayoutTrackName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:background="@null"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/icon_error_20"
+            app:endIconMode="clear_text"
+            app:endIconDrawable="@drawable/icon_clear_20">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditArtist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/work_sans_bold"
+                android:hint="Artist"
+                android:textAlignment="center"
+                android:textSize="12sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutLabel"
+            android:layout_below="@id/textInputLayoutArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:background="@null"
+            app:errorEnabled="false"
+            app:errorIconDrawable="@drawable/icon_error_20"
+            app:endIconMode="clear_text"
+            app:endIconDrawable="@drawable/icon_clear_20">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/work_sans_bold"
+                android:hint="Label"
+                android:textAlignment="center"
+                android:textSize="12sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutISRC"
+            android:layout_below="@id/textInputLayoutLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:background="@null"
+            app:counterMaxLength="12"
+            app:counterEnabled="true"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/icon_error_20"
+            app:endIconMode="clear_text"
+            app:endIconDrawable="@drawable/icon_clear_20">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditISRC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/work_sans_bold"
+                android:hint="ISRC"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:maxLength="12"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutUPC"
+            android:layout_below="@id/textInputLayoutISRC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:background="@null"
+            app:counterMaxLength="20"
+            app:endIconMode="clear_text"
+            app:endIconDrawable="@drawable/icon_clear_20">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditUPC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/work_sans_bold"
+                android:hint="UPC"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:maxLength="20"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/releaseSelectors"
+        android:layout_below="@id/inputsNewRelease"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Release Date"
+            android:textColorHint="@color/purple_500"
+            android:id="@+id/buttonReleaseDate"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_centerVertical="true"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/buttonReleaseDate"
+            android:id="@+id/buttonSelfRelease"
+            android:text="Is this a self release?"
+            android:textSize="12sp"
+            android:fontFamily="@font/work_sans_bold"
+            app:switchPadding="20dp"
+            android:paddingLeft="20dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/buttonsGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/releaseSelectors"
+        android:layout_centerHorizontal="true"
+        android:columnCount="1"
+        android:rowCount="4"
+        android:useDefaultMargins="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/buttonsGridRowOne"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Distro"
+                android:textSize="10sp"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="SoundCloud"
+                android:textSize="10sp"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="YouTube"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="YT CID"
+                app:iconGravity="textStart"
+                android:tooltipText="YouTube Content ID"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/buttonsGridRowTwo"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Audius"
+                android:textSize="10sp"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Bandcamp"
+                android:textSize="10sp"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="SX Artist"
+                app:iconGravity="textStart"
+                android:tooltipText="SoundExchange (Artist)"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="SX RO"
+                app:iconGravity="textStart"
+                android:tooltipText="SoundExchange (Rights Owner)"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/buttonsGridRowThree"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="BMI"
+                android:textSize="10sp"
+                android:layout_weight="10"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Songtrust"
+                android:textSize="10sp"
+                android:layout_weight="0"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="MLC"
+                android:layout_weight="10"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="Art License"
+                android:layout_weight="0"
+                app:iconGravity="textStart"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/buttonsGridRowFour"
+            >
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="DistroLock"
+                android:textSize="10sp"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:text="Dropbox"
+                android:textSize="10sp"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="Legal"
+                app:iconGravity="textStart"
+                android:tooltipText="Contract Signed?"/>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:text="Stems"
+                app:iconGravity="textStart"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/footerNewRelease"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonsGrid"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/dummyViewNewRelease"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/buttonAddRelease"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/dummyViewNewRelease"
+            android:text="Add Release"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/buttonCancelRelease"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/dummyViewNewRelease"
+            android:text="Cancel"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

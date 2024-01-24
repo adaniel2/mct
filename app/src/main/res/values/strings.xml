@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">releasesApp</string>
+    <string name="password">Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="email">Email</string>
+    <string name="login">LOGIN</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="release_date">Release Date</string>
+</resources>

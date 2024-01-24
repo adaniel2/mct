@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatalogueActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="#FAEAB1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAF8F1"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBarCatalogue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="14dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_white_rounded"
+        app:queryBackground="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Catalogue" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layoutAnimation="@anim/layout_animation"
+        android:id="@+id/listCatalogue"
+        android:layout_below="@id/searchBarCatalogue"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginBottom="14dp"
+        android:scrollbarSize="1dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
